@@ -1,23 +1,9 @@
-DROP TABLE IF EXISTS department;
-DROP TABLE IF EXISTS role;
-DROP TABLE IF EXISTS employee;
+DROP TABLE IF EXISTS employees;
 
-
-CREATE TABLE department(
-    id INT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL
-);
-
-CREATE TABLE role(
-    id INT PRIMARY KEY,
-    role_title VARCHAR(30) NOT NULL,
-    salary DECIMAL NOT NULL,
-    department_id INT NOT NULL
-);
-
-CREATE TABLE employee(
-    id INT PRIMARY KEY,
-    first_name VARCHAR(30) NOT NULL,
-    last_name VARCHAR(30) NOT NULL,
-    manager_id INT
+CREATE TABLE employees (
+  id INTEGER PRIMARY KEY,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  role_id INT,
+  manager_id INT
 );
