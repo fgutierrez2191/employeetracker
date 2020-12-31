@@ -4,11 +4,16 @@
   "description": "a command line app used to track and update your team of employees",
   "main": "server.js",
   "dependencies": {
-    "inquirer": "^7.3.3"
+    "express": "^4.17.1",
+    "inquirer": "^7.3.3",
+    "sqlite3": "^5.0.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "sqlite3 db/employee.db < db/schema.sql",
+    "seed": "sqlite3 db/employee.db < db/seeds.sql",
+    "db": "sqlite3 db/employee.db",
     "start": "node server.js"
   },
   "repository": {
@@ -20,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/fgutierrez2191/employeetracker/issues"
   },
-  "homepage": "https://github.com/fgutierrez2191/employeetracker#readme"
+  "homepage": "https://github.com/fgutierrez2191/employeetracker#readme",
+  "keywords": []
 }
