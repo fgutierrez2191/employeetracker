@@ -4,6 +4,7 @@
   "description": "a command line app used to track and update your team of employees",
   "main": "server.js",
   "dependencies": {
+    "console.table": "^0.10.0",
     "express": "^4.17.1",
     "inquirer": "^7.3.3",
     "sqlite3": "^5.0.0"
